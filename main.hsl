@@ -1,1 +1,1 @@
-import { arf_parse } from "./arf";
+import { arf_parse } from "./arf.hsl";
