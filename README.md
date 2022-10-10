@@ -1,4 +1,26 @@
-## arf_parse($mail, $options)
+# DSN parser
+
+## Installation
+
+Follow the [instructions](https://docs.halon.io/manual/comp_install.html#installation) in our manual to add our package repository and then run the below command.
+
+### Ubuntu
+
+```
+apt-get install halon-extras-arf
+```
+
+### RHEL
+
+```
+yum install halon-extras-arf
+```
+
+## Exported functions
+
+These functions needs to be [imported](https://docs.halon.io/hsl/structures.html#import) from the `extras://arf` module path.
+
+### arf_parse($mail, $options)
 
 Parse a rfc5965 compliant ARF report (message/feedback-report), into a associative array containing the report header fields (all lowercased).
 
