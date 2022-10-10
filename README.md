@@ -1,4 +1,4 @@
-# DSN parser
+# ARF parser
 
 ## Installation
 
