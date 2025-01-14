@@ -1,4 +1,4 @@
-function arf_parse($mail, $options = ["original_message" => false, "original_headers" => false])
+function arf_parse($mail, $options = ["original_message" => false, "original_headers" => false, "xarf" => false])
 {
     if ($mail->getType() !== "multipart/report")
         return none;
@@ -46,6 +46,16 @@ function arf_parse($mail, $options = ["original_message" => false, "original_hea
             $body = $parts[0]->getBody();
             if ($body) {
                 $arf["original_headers"] = $body;
+            }
+        }
+    }
+
+    if ($options["xarf"]) {
+        $parts = $mail->findByType(''^application/json$'');
+        if ($parts) {
+            $body = $parts[0]->getBody();
+            if ($body) {
+                $arf["xarf"] = json_decode($body);
             }
         }
     }
