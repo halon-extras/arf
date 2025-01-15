@@ -37,6 +37,7 @@ The following options are available in the **options** array.
 
 - original_message `boolean` - Include the original mail message in the output (if it exists), the default is `false`
 - original_headers `boolean` - Include the original mail message headers in the output (if they exist), the default is `false`
+- xarf `boolean` - process the xarf application/json content (if it exists), the default is `false`
 
 ```
 {
